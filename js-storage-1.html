@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Storage API</title>
+</head>
+<body>
+    <h1>Web Storage API</h1>
+    <script>
+        // Check if authUser is stored in localStorage
+        if (!localStorage.getItem('authUser')) {
+            // If not stored, create an authUser object
+            const authUser = {
+                username: 'tom.cruise',
+                email: 'tom.cruise@example.com',
+                isLoggedIn: true
+            };
+
+            // Store authUser in localStorage
+            localStorage.setItem('authUser', JSON.stringify(authUser));
+        }
+
+        // Check if authUser is stored in sessionStorage
+        if (!sessionStorage.getItem('authUser')) {
+            // If not stored, create an authUser object
+            const authUser = {
+                username: 'will.smith',
+                email: 'will.smith@example.com',
+                isLoggedIn: true
+            };
+
+            // Store authUser in sessionStorage
+            sessionStorage.setItem('authUser', JSON.stringify(authUser));
+        }
+
+        // Retrieve and parse authUser from localStorage
+        const authUserLocalStorage = JSON.parse(localStorage.getItem('authUser'));
+
+        // Retrieve and parse authUser from sessionStorage
+        const authUserSessionStorage = JSON.parse(sessionStorage.getItem('authUser'));
+
+        // Print authUser values
+        console.log('LocalStorage AuthUser:', authUserLocalStorage);
+        console.log('\nSessionStorage AuthUser:', authUserSessionStorage);
+
+        // Display information about the storage
+        console.log('\nLocalStorage:');
+        console.log('Number of items:', localStorage.length);
+        console.log('Keys:', Object.keys(localStorage));
+        console.log('\nSessionStorage:');
+        console.log('Number of items:', sessionStorage.length);
+        console.log('Keys:', Object.keys(sessionStorage));
+    </script>
+</body>
+</html>
+

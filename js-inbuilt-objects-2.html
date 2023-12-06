@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regular Expressions in JS</title>
+</head>
+<body>
+    <h1>Regular Expressions in JS</h1>
+    <script>
+        document.write('/\\d/.test("abc123")  ',
+            /\d/.test("abc123"),'<br/><br/>');
+        document.write('/^\\d/.test("abc123")  ',
+            /^\d/.test("abc123"),'<br/><br/>');
+        document.write('/\\d$/.test("abc123")  ',
+            /\d$/.test("abc123"),'<br/><br/>');
+        document.write('"Hello 123".match(/\\d+/)  ',
+            "Hello 123".match(/\d+/),'<br/><br/>');
+        document.write('"Hello 123".replace(/\\d+/, "456")  ',
+            "Hello 123".replace(/\d+/, "456"), '<br/><br/>');
+        document.write('"Hello 123".search(/\\d+/)  ',
+            "Hello 123".search(/\d+/),'<br/><br/>');
+        document.write('"apple,orange,banana".split(",")  ',
+            "apple,orange,banana".split(","), '<br/><br/>');
+    </script>
+</body>
+</html>
+

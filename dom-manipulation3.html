@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <script>
+        function addPart() {
+            // Create a new <li> under <ul>
+            const ulEl = document.getElementById("parts");
+            let liEl = document.createElement("li");
+
+            // Assign value of input to new <li>
+            let inputEl = document.getElementById("part");
+            liEl.textContent = inputEl.value+" ";
+
+            // Create a remove button for the new <li>
+            let removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.onclick = function () {
+                ulEl.removeChild(liEl);
+            };
+
+            // Append the remove button to the new <li>
+            liEl.appendChild(removeButton);
+
+            // Append new <li> under <ul>
+            ulEl.appendChild(liEl);
+            inputEl.value = "";
+
+            // Bring focus to the input for the next entry
+            inputEl.focus();
+        }
+    </script>
+</head>
+<body>
+<h1>Parts of a Computer</h1>
+<ul id="parts">
+    <li>Monitor</li>
+</ul>
+Enter Part name: <input type="text" id="part" />
+<input type="button" onclick="addPart()" value="Add Part"/>
+</body>
+</html>
+

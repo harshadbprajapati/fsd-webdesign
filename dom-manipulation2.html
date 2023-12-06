@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <script>
+        function changePara1Styles(){
+            const paraEl = document.getElementById("para-1");
+            paraEl.style.color = "blue";
+        }
+        function changePara1Content(){
+            const paraEl = document.getElementById("para-1");
+            paraEl.innerHTML = "Updated First Paragraph ..."
+        }
+        function changeParaStyles(){
+            const paraElements = document.querySelectorAll("p.highlight");
+            for (paragraphEl of paraElements){
+                paragraphEl.style.color = "red";
+            }
+        }
+        function changeClassStyles(){
+            const highlightEls = document.getElementsByClassName("highlight");
+            for (highlightEl of highlightEls){
+                highlightEl.style.color = "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="highlight">Three sample paragraphs ...</h1>
+    <p id="para-1">First Paragraph ...</p>
+    <input type="button" onclick="changePara1Styles()" value="Change Paragraph Color"/>
+    <input type="button" onclick="changePara1Content()" value="Change Paragraph Content"/>
+    <p class="highlight">Second Paragraph ...</p>
+    <p class="highlight">Third Paragraph ...</p>
+    <input type="button" onclick="changeParaStyles()" value="Change Paragraph Color"/>
+    <input type="button" onclick="changeClassStyles()" value="Change Class Style"/>
+</body>
+</html>
+

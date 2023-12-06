@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <script>
+        function changeParaStyles(){
+            const paraElements = document.getElementsByTagName("p");
+            for (paragraphEl of paraElements){
+                paragraphEl.style.color = "blue";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>First Paragraph ...</p>
+    <p>Second Paragraph ...</p>
+    <p>Third Paragraph ...</p>
+    <input type="button" onclick="changeParaStyles()" value="Change Paragraph Color"/>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await API Example</title>
+</head>
+<body>
+<h1>Async/Await API Example</h1>
+<script>
+    async function makeAPICall(url) {
+        try {
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error(`Failed to fetch data. Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
+
+    // Example usage with JSONPlaceholder API
+    const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+
+    (async () => {
+        try {
+            const data = await makeAPICall(apiUrl);
+            console.log('API Response:', data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    })();
+</script>
+
+</body>
+</html>
+

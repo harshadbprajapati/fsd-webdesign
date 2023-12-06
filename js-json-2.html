@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Demo</title>
+</head>
+<body>
+    <h1>JSON Demo</h1>
+    <script>
+        // Creating an array of objects
+        const arrayOfObjects = [
+            { id: 1, name: 'Tom', age: 55 },
+            { id: 2, name: 'Will', age: 45 },
+            { id: 3, name: 'Arnold', age: 61 }
+        ];
+
+        // Stringifying an array of objects
+        const arrayJsonData = JSON.stringify(arrayOfObjects);
+
+        console.log('\nArray of Objects JSON Data:');
+        console.log(arrayJsonData);
+
+        // Parsing JSON array back to JavaScript array
+        const parsedArray = JSON.parse(arrayJsonData);
+
+        console.log('\nParsed Array of Objects:');
+        console.log(parsedArray);
+    </script>
+
+</body>
+</html>
+

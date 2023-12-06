@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traditional Variable Declaration</title>
+</head>
+<body>
+    <h1>Traditional Variable Declaration</h1>
+    <script>
+        function example() {
+            if (true) {
+                var x = 10;
+                console.log('Within scope x = ', x); // Outputs 10
+            }
+            console.log('Outside scope x = ', x); // Outputs 10 due to hoisting
+        }
+        example();
+        //
+        // console.log(x); // Outputs undefined
+        // var x = 5;
+        // console.log(x); // Outputs 5
+        //
+        // var y;
+        // console.log(y); // Outputs undefined
+        // y = 10;
+        // console.log(y); // Outputs 10
+        //
+        // example(); // Outputs "Hello, hoisting!"
+        // function example() {
+        //     console.log("Hello, hoisting!");
+        // }
+        //
+        //
+        //
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Object Prototype</title>
+</head>
+<body>
+    <h1>JS Object Prototype</h1>
+    <script>
+        // Create a constructor function
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        let p1 = new Person('Tom', 'Cruise', 50, 'blue');
+        let p2 = new Person('Will', 'Smith', 48, 'brown');
+
+        // Attaching a new property to all instances of Person
+        Person.prototype.profession = "actor";
+
+        // Attaching a new method to all instances of Student
+        Person.prototype.fullName = function() {
+            return this.firstName + " " + this.lastName;
+        }
+
+
+        Person.prototype.getProfession = function() {
+            return this.profession;
+        }
+        document.write(p1.fullName()+" is "+p1.getProfession()+"<br/><br/>");
+        document.write(p2.fullName()+" is "+p2.getProfession()+"<br/><br/>");
+    </script>
+</body>
+</html>
+

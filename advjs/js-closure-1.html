@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nested Function Scope</title>
+</head>
+<body>
+    <h1>Nested Function Scope</h1>
+    <script>
+        let globalA = 10;
+        function outer(){
+            let outerA = 20;
+            function inner(){
+                let innerA = 30;
+                console.log("innerA",innerA);
+                console.log("outerA",outerA);
+                console.log("globalA",globalA);
+            }
+            inner();
+        }
+        outer();
+    </script>
+</body>
+</html>
+

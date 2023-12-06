@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        numbers.forEach(number => console.log(number));
+
+        const allEven = numbers.every(number => number % 2 === 0);
+        console.log('allEven = ',allEven);
+        // Result: true
+
+        const hasEven = numbers.some(number => number % 2 === 0);
+        console.log('hasEven = ',hasEven);
+        // Result: true
+
+        const evenNumber = numbers.find(number => number % 2 === 0);
+        console.log('evenNumber = ',evenNumber);
+        // Result: 2
+
+    </script>
+</body>
+</html>
+

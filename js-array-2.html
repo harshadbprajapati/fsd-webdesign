@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array Demo</title>
+</head>
+<body>
+    <h1>JS Array Demo</h1>
+    <script>
+        cars = {
+            myCar: "Mercedes-Benz S-Class",
+            fatherCar: "Toyota Camry",
+            1: "Mercedes-Benz S-Class"
+        };
+        document.write('cars[1] = ',cars[1],'<br/>');
+        document.write('There is no cars[0]. cars[0] = ',cars[0],'<br/>');
+        document.write('cars.myCar = ',cars.myCar,'<br/>');
+        document.write("cars[\"myCar\"] = ",cars["myCar"],'<br/>');
+        let owner = 'father';
+        document.write("cars[\"fatherCar\"] = ",cars[owner+"Car"],'<br/>');
+    </script>
+
+</body>
+</html>
+

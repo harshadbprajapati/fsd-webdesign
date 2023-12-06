@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        const nestedArray = [1, [2, [3, 4], 5]];
+        console.log('nestedArray = ',nestedArray);
+
+        // Using flat with default depth (1)
+        const flatArray = nestedArray.flat();
+        console.log('flatArray = ',flatArray);
+        // Result: [1, 2, [3, 4], 5]
+
+        // Using flat with custom depth (2)
+        const deepFlatArray = nestedArray.flat(2);
+        console.log('deepFlatArray = ',deepFlatArray);
+        // Result: [1, 2, 3, 4, 5]
+    </script>
+</body>
+</html>
+

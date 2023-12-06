@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array Methods</title>
+</head>
+<body>
+    <h1>JS Array Methods</h1>
+    <script>
+        // Create an array
+        let fruits = ['apple', 'banana', 'orange', 'mango'];
+        document.write('Initial fruits: ', fruits.join(';'), '<br/><br/>');
+
+        // 1. push(): Adds elements to the end of an array
+        fruits.push('grape', 'kiwi');
+        document.write('After push: ', fruits, '<br/><br/>');
+
+        // 2. pop(): Removes the last element from an array
+        let removedFruit = fruits.pop();
+        document.write('Popped fruit:', removedFruit, '<br/>');
+        document.write('After pop: ', fruits, '<br/><br/>');
+
+        // 3. unshift(): Adds elements to the beginning of an array
+        fruits.unshift('watermelon', 'cherry');
+        document.write('After unshift: ', fruits, '<br/><br/>');
+
+        // 4. shift(): Removes the first element from an array
+        let shiftedFruit = fruits.shift();
+        document.write('Shifted fruit: ', shiftedFruit, '<br/><br/>');
+        document.write('After shift: ', fruits, '<br/><br/>');
+
+        // 5. indexOf(): Returns the index of the first
+        // occurrence of an element in the array
+        let indexOfOrange = fruits.indexOf('orange');
+        document.write('Index of orange: ', indexOfOrange,
+            ' in ',fruits.toString(),'<br/><br/>');
+
+        // 6. slice(): Returns a portion of the array
+        let slicedFruits = fruits.slice(1, 4);
+        document.write('Sliced fruits: ', slicedFruits, '<br/><br/>');
+
+        // 7. join(): Joins all elements of an array into a string
+        let joinedString = fruits.join(', ');
+        document.write('Joined string: ', joinedString, '<br/><br/>');
+
+        // 8. reverse(): Reverses the elements of an array
+        let reversedFruits = fruits.reverse();
+        document.write('Reversed array: ', reversedFruits, '<br/><br/>');
+
+        // 9. concat(): Concatenates two or more arrays
+        let moreFruits = ['pineapple', 'blueberry'];
+        let combinedArray = fruits.concat(moreFruits);
+        document.write('Combined array: ', combinedArray, '<br/><br/>');
+    </script>
+
+</body>
+</html>
+

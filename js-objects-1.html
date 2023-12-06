@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects Demo</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <script>
+        function createObjects(){
+            // Create object using object literal syntax
+            const person1 = {
+                firstName:"Tom",
+                lastName:"Cruise",
+                age:50,
+                eyeColor:"blue"
+            };
+            // Print values of all properties
+            document.write("Property Values of person1:"+"<br/>");
+            for(let propValue of Object.values(person1)){
+                document.write(propValue+"<br/>");
+            }
+
+            // Create an empty object then add properties
+            const person2 = {};
+            person2.firstName="Tom";
+            person2.lastName="Cruise";
+            person2.age=50;
+            person2.eyeColor="blue";
+            document.write("Properties of person2:"+"<br/>");
+            // Print all names of all properties
+            for(let prop of Object.keys(person2)){
+                document.write(prop+"<br/>");
+            }
+        }
+        createObjects();
+    </script>
+
+</body>
+</html>
+

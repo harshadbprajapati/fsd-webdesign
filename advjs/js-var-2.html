@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Variable Declaration</title>
+</head>
+<body>
+    <h1>Modern Variable Declaration</h1>
+    <script>
+        let x = 10;
+        if (true) {
+            let x = 20;
+            console.log('Within scope x = ', x); // Outputs 20
+        }
+        console.log('Outside scope x = ', x); // Outputs 10 (outer scope variable)
+
+        const PI = 3.14;
+        // PI = 3.1415; // Error: Assignment to a constant variable
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Demo</title>
+</head>
+<body>
+    <h1>JSON Demo</h1>
+    <script>
+        // Sample JSON data
+        const jsonData = '{"name": "Tom Cruise", "age": 55, "city": "New York"}';
+
+        // Parsing JSON using JSON.parse
+        const parsedData = JSON.parse(jsonData);
+
+        console.log('Parsed Data:');
+        console.log(parsedData);
+
+        // Modifying the parsed object
+        parsedData.age = parsedData.age + 1;
+
+        // Stringifying the modified object using JSON.stringify
+        const modifiedJsonData = JSON.stringify(parsedData);
+
+        console.log('\nModified JSON Data:');
+        console.log(modifiedJsonData);
+    </script>
+
+</body>
+</html>
+

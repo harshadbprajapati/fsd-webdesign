@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects Demo</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <script>
+        // Create a constructor function
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        function createObjects(){
+            // Create an empty object then add properties
+            const person1 = new Object();
+            person1.firstName="Tom";
+            person1.lastName="Cruise";
+            person1.age=50;
+            person1.eyeColor="blue";
+            document.write("Property Name and Property Values of person1:"+"<br/>");
+            // Print key value pairs of properties
+            for(let [prop, value] of Object.entries(person1)){
+                document.write(prop+":"+value+"<br/>");
+            }
+
+            const person2 = new Person("Tom", "Cruise", 50, "blue");
+            document.write("Property Name and Property Values of person2:"+"<br/>");
+            // Print key value pairs of properties
+            document.write("Object.values(person2)[0]="+Object.values(person2)[0]+"<br/>");
+            document.write("person2.lastName="+person2.lastName+"<br/>");
+            document.write("person2['age']="+person2['age']+"<br/>");
+            let prop = 'eyeColor';
+            document.write("let prop = 'eyeColor'; person2[prop]="+person2[prop]+"<br/>");
+        }
+        createObjects();
+    </script>
+</body>
+</html>
+

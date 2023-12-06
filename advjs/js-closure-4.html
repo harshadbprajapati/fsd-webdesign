@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>Closure</h1>
+    <script>
+        const add = (function () {
+            let counter = 0;
+            return function () {counter += 1; return counter}
+        })();
+        console.log('counter is ', add());
+        console.log('counter is ', add());
+        console.log('counter is ', add());
+        // the counter is now 3
+    </script>
+</body>
+</html>
+

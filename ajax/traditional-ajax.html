@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Example with XMLHttpRequest</title>
+</head>
+<body>
+<h1>Fetch Data with AJAX using XMLHttpRequest</h1>
+<div id="output"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Create a new XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+
+    // Configure it: GET-request for the URL /data
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+
+    // This function will be called whenever the state of the AJAX request changes
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // Parse the JSON response
+        var data = JSON.parse(xhr.responseText);
+
+        // Update the HTML content with the fetched data
+        var outputElement = document.getElementById('output');
+        outputElement.innerHTML = '<p>Title: ' + data.title + '</p>';
+      }
+    };
+
+    // Send the request
+    xhr.send();
+    //
+    // var xhr = new XMLHttpRequest();
+    //
+    // xhr.onreadystatechange = function() {
+    //   if (xhr.readyState == 4 && xhr.status == 200) {
+    //     // The request is complete, and the response is available
+    //     console.log(xhr.responseText);
+    //   } else if (xhr.readyState == 3) {
+    //     // The response is being received (LOADING state)
+    //     console.log('Receiving data...');
+    //   } else if (xhr.readyState == 2) {
+    //     // Headers and status are available (HEADERS_RECEIVED state)
+    //     console.log('Headers received. Status:', xhr.status);
+    //   } else if (xhr.readyState == 1) {
+    //     // The request has been opened (OPENED state)
+    //     console.log('Request opened.');
+    //   } else if (xhr.readyState == 0) {
+    //     // The object has been created, but open() has not been called yet (UNSENT state)
+    //     console.log('XMLHttpRequest object created.');
+    //   }
+    // };
+    //
+    // xhr.open('GET', 'https://example.com/api/data', true);
+    // xhr.send();
+  });
+</script>
+</body>
+</html>
+

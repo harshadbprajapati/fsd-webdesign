@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Type Demo</title>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            Click me
+        </div>
+    </div>
+    <script>
+        function clickHandler(event){
+            console.log("event called on target = ",event.target);
+            console.log("event called on currentTarget = ",event.currentTarget);
+        }
+        document.getElementById("outer").addEventListener("click", clickHandler, false);
+        document.getElementById("inner").addEventListener("click", clickHandler, false);
+    </script>
+</body>
+</html>
+

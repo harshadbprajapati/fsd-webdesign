@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        const evens = numbers.filter(x => x % 2 === 0);
+        console.log('numbers = ',numbers);
+        console.log('evens = ',evens);
+        // Result: [2, 4]
+
+        const words = ['apple', 'banana', 'cherry'];
+        const aWords = words.filter(word => word.includes('a'));
+        console.log('words = ',words);
+        console.log('aWords = ',aWords);
+        // Result: ['apple', 'banana']
+    </script>
+</body>
+</html>
+

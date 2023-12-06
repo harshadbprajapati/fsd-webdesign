@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array Demo</title>
+</head>
+<body>
+    <h1>JS Array Demo</h1>
+    <script>
+        let fruits = ['apple', 'banana', 'orange'];
+        document.write('fruits = ', fruits, '<br/>');
+
+        let numbers = new Array(1, 2, 3, 4, 5);
+        document.write('numbers = ', numbers, '<br/>');
+
+        // Creates an array with length 5 but all elements are undefined
+        let emptyArray = new Array(5);
+        document.write('emptyArray = ', emptyArray,
+            ' has ',emptyArray.length,' elements<br/>');
+
+        let helloChars = Array.from('hello');
+        // Result: ['h', 'e', 'l', 'l', 'o']
+        document.write('helloChars = ', helloChars, '<br/>');
+
+        let newNumberArray = Array.of(1, 2, 3, 4, 5);
+        document.write('newNumberArray = ', newNumberArray, '<br/>');
+
+        let largeArray = [];
+        largeArray[19] = 10;
+        document.write('largeArray = ', largeArray,
+            ' has ',largeArray.length,' elements<br/>');
+
+    </script>
+
+</body>
+</html>
+
